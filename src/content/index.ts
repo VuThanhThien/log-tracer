@@ -27,7 +27,7 @@ function extractGrafanaLogs(): string {
       if (/-logs-row-[a-zA-Z]/.test(row.className)) continue;
 
       const timeEl = row.querySelector('[class*="-logs-row__localtime"]');
-      const msgEl  = row.querySelector('[class*="-logs-row__message"]');
+      const msgEl  = row.querySelector('[class*="-logs-row__message"] span');
       if (!msgEl) continue;
 
       const time = timeEl?.textContent?.trim() ?? "";
