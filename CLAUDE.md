@@ -7,10 +7,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ```bash
 pnpm install          # Install dependencies
 pnpm run build        # TypeScript check + Vite build (outputs to dist/)
-pnpm run dev          # Watch mode build (rebuilds on file change)
 pnpm run lint         # Run ESLint
 pnpm run lint:fix     # Auto-fix ESLint issues
-pnpm run crawl <url> [selector] [output-file]  # CLI Puppeteer crawler
 ```
 
 To load the extension in Chrome: enable Developer mode at `chrome://extensions`, click "Load unpacked", select the `dist/` folder.
@@ -34,7 +32,3 @@ Vite builds all three entry points with separate output names (`content.js`, `ba
 ## UI Components
 
 Components in `src/components/` follow a shadcn-style pattern using CVA (class-variance-authority) for variants and `@radix-ui/react-slot` for composition. The `cn()` utility in `src/lib/utils.ts` merges Tailwind classes. Dark theme with cyan accent colors throughout.
-
-## CLI Crawler
-
-`scripts/crawl.mjs` is a standalone Node.js script using Puppeteer that replicates the content script's text extraction logic for headless use. It is excluded from the extension build and not linted by ESLint.

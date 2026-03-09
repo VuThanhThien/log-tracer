@@ -1,5 +1,5 @@
 {
-  "disableSessionStartHook": false,
+  "disableSessionStartHook": true,
   "disableUserPromptSubmitHook": false,
   "disablePreToolUseHook": false,
   "disablePostToolUseHook": false,
